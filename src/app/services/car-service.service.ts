@@ -1,5 +1,4 @@
 import {computed, Injectable, signal} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
 import {IProducts} from "./api-service.service";
 
 @Injectable({
