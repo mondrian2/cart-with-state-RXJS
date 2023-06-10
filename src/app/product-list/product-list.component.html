@@ -1,5 +1,5 @@
 <div class="product-list">
-  <ng-container *ngFor="let row of api.products$ | async">
+  <ng-container *ngFor="let row of api.products()">
     <mat-card class="card">
       <img mat-card-image [src]=row.image [alt]=row.title>
       <mat-card-title>{{row.title}}</mat-card-title>

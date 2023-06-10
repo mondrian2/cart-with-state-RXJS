@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {toSignal} from "@angular/core/rxjs-interop";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiServiceService {
-public products$ = this.http.get<IProducts[]>('https://fakestoreapi.com/products');
+public products = toSignal(this.http.get<IProducts[]>('https://fakestoreapi.com/products'));
   constructor(private http: HttpClient) { }
 }
 
