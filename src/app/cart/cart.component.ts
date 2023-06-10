@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {CarServiceService} from "../services/car-service.service";
 import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, NgOptimizedImage],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
@@ -15,6 +15,6 @@ export class CartComponent {
   }
 
   removeProduct(id: number): void {
-    this.cartService.removeProduct(id);
+    this.cartService.removeProductSignal(id);
   }
 }

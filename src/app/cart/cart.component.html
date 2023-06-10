@@ -1,8 +1,8 @@
 <div class="cart-container">
-  <ng-container *ngIf="cartService.totalItems$ | async">
-    <ng-container *ngFor="let row of cartService.carItems$ | async; let i = index;">
+  <div *ngIf="cartService.totalItems()">
+    <ng-container *ngFor="let row of cartService.cartItems(); let i = index;">
       <div class="row">
-        <div class="img"><img [src]=row.image [alt]=row.title></div>
+        <div class="img"><img [src]="row.image" [alt]=row.title></div>
         <div class="data">
           <div class="description">{{row.title}}</div>
           <h1 class="price">{{row.price | currency: 'R$ '}}</h1>
@@ -12,10 +12,7 @@
     </ng-container>
     <div class="total">
       <h1>TOTAL</h1>
-      <h1>{{cartService.subTotal$ | async | currency: 'R$ '}}</h1>
+      <h1>{{cartService.subtotal() | currency: 'R$ '}}</h1>
     </div>
-  </ng-container>
+  </div>
 </div>
-<!--<div class="no-item" noItem>-->
-<!--  no cart-->
-<!--</div>-->

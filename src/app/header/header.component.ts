@@ -15,13 +15,10 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  quant = 0
   constructor(
     public cartService: CarServiceService,
     private router: Router
-  ) {
-    this.cartService.totalItems$.subscribe(t => this.quant = t);
-  }
+  ) {}
   goList(): void {
     this.router.navigate(['/products']);
   }

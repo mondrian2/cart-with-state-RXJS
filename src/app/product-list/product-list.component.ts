@@ -19,6 +19,6 @@ export class ProductListComponent {
   ) {}
 
   addProduct(product: IProducts): void {
-    this.cartService.addProducts(product);
+    this.cartService.addProductSignal(product);
   }
 }
