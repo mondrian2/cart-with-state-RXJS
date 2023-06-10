@@ -1,0 +1,20 @@
+<div class="product-list">
+  <ng-container *ngFor="let row of api.products$ | async">
+    <mat-card class="card">
+      <img mat-card-image [src]=row.image [alt]=row.title>
+      <mat-card-title>{{row.title}}</mat-card-title>
+      <mat-card-subtitle>{{row.category}}</mat-card-subtitle>
+      <mat-card-content>
+        <p>
+          {{row.description}}
+        </p>
+        <h1>
+          {{row.price | currency: 'R$ '}}
+        </h1>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addProduct(row)">ADD</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>

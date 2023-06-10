@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <button (click)="goList()" mat-icon-button class="header-icon" aria-label="icon-button with menu icon">
+    <mat-icon>storefront</mat-icon>
+  </button>
+  <span>POC - Cart - RXJS to Signals</span>
+  <span class="header-spacer"></span>
+  <button (click)="goCart()" mat-icon-button class="example-icon favorite-icon" aria-label="icon-button with heart icon">
+      <mat-icon [matBadge]=quant matBadgeColor="warn">shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>

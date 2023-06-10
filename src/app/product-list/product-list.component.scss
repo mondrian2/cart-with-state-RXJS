@@ -1,0 +1,24 @@
+.card {
+  max-width: 300px;
+}
+img {
+  width: 100%;
+  max-width: 300px;
+}
+h1 {
+  font-weight: 700;
+  color: chocolate;
+}
+.product-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mat-mdc-card {
+  background-color: white;
+}
